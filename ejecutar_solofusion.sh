@@ -37,7 +37,7 @@ sudo rm /home/pi/Abrir_solofusion.desktop
 cd /home/pi/YSFClients/YSFGateway
 xterm -geometry 88x7+648+665 -bg black -fg orange -fa ‘verdana’ -fs 9x -T CONSOLA_YSFGateway -e ./YSFGateway YSFGateway.ini & 
 cd /home/pi/MMDVMHost
-xterm -geometry 88x10+648+765 -bg black -fg orange -fa ‘verdana’ -fs 9x -T CONSOLA_SOLOFUSION -e sudo ./MMDVMSOLOFUSION MMDVMSOLOFUSION.ini
+xterm -geometry 88x10+648+765 -bg black -fg orange -fa ‘verdana’ -fs 9x -T CONSOLA_SOLOFUSION -e sudo ./MMDVMFUSION MMDVMFUSION.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_solofusion.desktop /home/pi
