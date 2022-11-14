@@ -8,6 +8,7 @@ mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/MMDVM.ini)
 puerto=`expr substr $mode 15 14`
 puerto="  "$puerto
 cd /home/pi/Desktop
+
 sudo cp RXF_RADIO.desktop /home/pi
 frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVM.ini)
 frecuencia=`expr substr $frecuencia 13 9`
@@ -34,17 +35,11 @@ sleep 1
 sudo rm /home/pi/Abrir_Radio.desktop
 
 cd /home/pi/MMDVMHost
-clear
-echo "\33[1;36m"
-echo " **************************************************************************"
-echo "                             ABRIENDO RADIO                                "
-echo " **************************************************************************"
-sleep 2
-#/home/pi/A108/./qt_info_radio & sudo ./MMDVMHost MMDVM.ini
-sudo ./MMDVMHost MMDVM.ini
+xterm -geometry 88x17+1274+0 -bg blue -fg white -fa ‘verdana’ -fs 9x -T CONSOLA_RADIO -e sudo ./MMDVM MMDVM.ini
+
 cd /home/pi/Desktop
 sudo cp Abrir_Radio.desktop /home/pi
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=88x19 --title=RADIO -e sudo sh ejecutar_radio.sh'" /home/pi/Abrir_Radio.desktop
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;sh ejecutar_radio.sh'" /home/pi/Abrir_Radio.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_RADIO_OFF.png" /home/pi/Abrir_Radio.desktop
 sed -i "10c Name[es_ES]=Abrir RADIO" /home/pi/Abrir_Radio.desktop
 sed -i "5c MMDVM=OFF" /home/pi/status.ini
