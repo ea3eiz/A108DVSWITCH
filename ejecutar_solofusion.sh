@@ -42,7 +42,7 @@ xterm -geometry 88x10+648+765 -bg black -fg orange -fa ‘verdana’ -fs 9x -T C
 cd /home/pi/Desktop
 sudo cp Abrir_solofusion.desktop /home/pi
 
-sed -i "6c Exec=sh -c 'cd /home/pi/A108/;lxterminal --geometry=88x19 -e sudo sh ejecutar_solofusion.sh'" /home/pi/Abrir_solofusion.desktop
+sed -i "6c Exec=sh -c 'cd /home/pi/A108/;sh ejecutar_solofusion.sh'" /home/pi/Abrir_solofusion.desktop
 sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_YSF.png" /home/pi/Abrir_solofusion.desktop
 sed -i "11c Name[es_ES]=Abrir solo FUSION" /home/pi/Abrir_solofusion.desktop
 sed -i "12c SOLOFUSION=OFF" /home/pi/status.ini
