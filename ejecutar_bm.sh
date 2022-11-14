@@ -41,8 +41,8 @@ echo "                          ABRIENDO BRANDMEISTER                           
 echo " **************************************************************************"
 sleep 2
 #/home/pi/A108/./qt_info_bm & sudo ./MMDVMBM MMDVMBM.ini
-sudo ./MMDVMBM MMDVMBM.ini
 #sudo ./MMDVMBM MMDVMBM.ini
+xterm -geometry 76x16+2+0 -bg black -fg white -fa ‘verdana’ -fs 9x -T CONSOLA_BRANDMEISTER -e sudo ./MMDVMBM MMDVMBM.ini
 cd /home/pi/Desktop
 sudo cp Abrir_MMDVMBM.desktop /home/pi
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=88x19 --title=BRANDMEISTER -e sudo sh ejecutar_bm.sh'" /home/pi/Abrir_MMDVMBM.desktop
