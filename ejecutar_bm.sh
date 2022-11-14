@@ -35,13 +35,6 @@ sudo cp Abrir_MMDVMBM.desktop /home/pi/Desktop
 sudo rm /home/pi/Abrir_MMDVMBM.desktop
 
 cd /home/pi/MMDVMHost
-#echo "\33[38;5;138m"
-#echo " **************************************************************************"
-#echo "                          ABRIENDO BRANDMEISTER                            "
-#echo " **************************************************************************"
-#sleep 2
-#/home/pi/A108/./qt_info_bm & sudo ./MMDVMBM MMDVMBM.ini
-#sudo ./MMDVMBM MMDVMBM.ini
 xterm -geometry 88x17+22+0 -bg black -fg white -fa ‘verdana’ -fs 9x -T CONSOLA_BRANDMEISTER -e sudo ./MMDVMBM MMDVMBM.ini
 cd /home/pi/Desktop
 sudo cp Abrir_MMDVMBM.desktop /home/pi
