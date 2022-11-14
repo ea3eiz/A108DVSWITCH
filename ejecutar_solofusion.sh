@@ -25,7 +25,7 @@ sed -i "6c $frecuencia" /home/pi/INFO_RXF
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_solofusion.desktop /home/pi
-sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;sudo sh cerrar_solofusion.sh'" /home/pi/Abrir_solofusion.desktop
+sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;sh cerrar_solofusion.sh'" /home/pi/Abrir_solofusion.desktop
 sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_YSF_ON.png" /home/pi/Abrir_solofusion.desktop
 sed -i "11c Name[es_ES]=Cerrar solo FUSION" /home/pi/Abrir_solofusion.desktop
 sed -i "12c SOLOFUSION=ON" /home/pi/status.ini
@@ -34,16 +34,11 @@ sudo cp Abrir_solofusion.desktop /home/pi/Desktop
 
 sudo rm /home/pi/Abrir_solofusion.desktop
 
-echo "\33[38;5;138m"
-echo " **************************************************************************"
-echo "                          ABRIENDO SOLO FUSION                             "
-echo " **************************************************************************"
-sleep 2
 cd /home/pi/YSFClients/YSFGateway
-sudo lxterminal --geometry=88x12 -e ./YSFGateway YSFGateway.ini & 
+xterm -geometry 88x7+648+665 -bg black -fg orange -fa ‘verdana’ -fs 9x -T CONSOLA_YSFGateway -e ./YSFGateway YSFGateway.ini & 
 cd /home/pi/MMDVMHost
-#/home/pi/A108/./qt_info_solofusion & sudo ./MMDVMFUSION MMDVMFUSION.ini
-sudo ./MMDVMFUSION MMDVMFUSION.ini
+xterm -geometry 88x10+648+765 -bg black -fg orange -fa ‘verdana’ -fs 9x -T CONSOLA_SOLOFUSION -e sudo ./MMDVMSOLOFUSION MMDVMSOLOFUSION.ini
+
 cd /home/pi/Desktop
 sudo cp Abrir_solofusion.desktop /home/pi
 
