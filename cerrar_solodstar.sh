@@ -7,7 +7,7 @@ SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 # Cierra el icono Abrir Solo Dstar si no hay conexión 
 cd /home/pi/Desktop
 sudo cp Abrir_solodstar.desktop /home/pi
-sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
+sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=88x19 -e sudo sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
 sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_D-STAR.png" /home/pi/Abrir_solodstar.desktop
 sed -i "11c Name[es_ES]=Abrir solo DSTAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=OFF" /home/pi/status.ini
@@ -31,20 +31,13 @@ sudo rm /home/pi/Abrir_ircDDB.desktop
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=ON' ];then
 
-# Pone Enable=1 en [Dstar Network]
+# Pone Enable=1 en [Dstar Network] 
 sed -i "62c Enable=1" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sed -i "62c Enable=1" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 sed -i "62c Enable=1" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sed -i "62c Enable=1" /opt/MMDVM_Bridge/dmrplus.ini
 sed -i "62c Enable=1" /opt/MMDVM_Bridge/especial.ini
 
-
-# Pone Enable=1 en [Dstar]
-sed -i "40c Enable=1" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
-sed -i "40c Enable=1" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
-sed -i "40c Enable=1" /opt/MMDVM_Bridge/brandmeister_esp.ini
-sed -i "40c Enable=1" /opt/MMDVM_Bridge/dmrplus.ini
-sed -i "40c Enable=1" /opt/MMDVM_Bridge/especial.ini
 sudo systemctl restart ircddbgateway
 
 else
