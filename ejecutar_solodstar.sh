@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo systemctl stop irsddbgatewayd.service
+sudo systemctl retart ircddbgatewayd.service
 sleep 1
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 #Colores
