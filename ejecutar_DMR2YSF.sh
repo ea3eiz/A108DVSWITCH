@@ -45,7 +45,6 @@ sudo rm /home/pi/Abrir_DMR2YSF.desktop
 
 cd /home/pi/DMR2YSF
 xterm -geometry 88x6+1274+665 -bg black -fg yellow -fa ‘verdana’ -fs 9x -T CONSOLA_DMR2YSF -e ./DMR2YSF DMR2YSF.ini &
-sudo lxterminal --geometry=88x12 -e ./DMR2YSF DMR2YSF.ini & 
 
 cd /home/pi/MMDVMHost
 #/home/pi/A108/./qt_info_dmr2ysf & sudo lxterminal --geometry=77x18 --title=MMDVMDMR2YSF -e ./DMR2YSF MMDVMDMR2YSF.ini &
