@@ -1,6 +1,5 @@
 #!/bin/bash
-sudo systemctl restart ircddbgatewayd.service
-sleep 1
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 #Colores
 ROJO="\033[1;31m"
