@@ -1,8 +1,7 @@
 #!/bin/bash
 sudo killall MMDVMDSTAR
 sudo killall ircddbgatewayd
-sudo killall ircddbgateway
-
+sleep 2
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 
 # Cierra el icono Abrir Solo Dstar si no hay conexión  
