@@ -88,12 +88,12 @@ sudo systemctl stop ircddbgateway.service
 # Ejecuta Solo D-STAR 
 cd /home/pi/MMDVMHost
 #/home/pi/A108/./qt_info_solodstar & sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
-sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
+xterm -geometry 88x17+1274+665 -bg black -fg green -fa ‘verdana’ -fs 9x -T CONSOLA_SOLO_DSTAR -e sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
 
 # Cierra el icono Abrir Solo Dstar si no hay conexión  
 cd /home/pi/Desktop
 sudo cp Abrir_solodstar.desktop /home/pi
-sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=88x19 -e sudo sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
+sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
 sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_D-STAR.png" /home/pi/Abrir_solodstar.desktop
 sed -i "11c Name[es_ES]=Abrir solo DSTAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=OFF" /home/pi/status.ini
@@ -172,16 +172,22 @@ sed -i "62c Enable=0" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sed -i "62c Enable=0" /opt/MMDVM_Bridge/dmrplus.ini
 sed -i "62c Enable=0" /opt/MMDVM_Bridge/especial.ini
 
+# Pone Enable=0 en [Dstar]
+sed -i "40c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
+sed -i "40c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
+sed -i "40c Enable=0" /opt/MMDVM_Bridge/brandmeister_esp.ini
+sed -i "40c Enable=0" /opt/MMDVM_Bridge/dmrplus.ini
+sed -i "40c Enable=0" /opt/MMDVM_Bridge/especial.ini
 sudo systemctl stop ircddbgateway.service
 
 # Ejecuta Solo D-STAR
 cd /home/pi/MMDVMHost
 #/home/pi/A108/./qt_info_solodstar & sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
-sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
+xterm -geometry 88x17+1274+665 -bg black -fg green -fa ‘verdana’ -fs 9x -T CONSOLA_SOLO_DSTAR -e sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
 # Cierra el icono Abrir Solo Dstar si no hay conexión 
 cd /home/pi/Desktop
 sudo cp Abrir_solodstar.desktop /home/pi
-sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=88x19 -e sudo sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
+sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
 sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_D-STAR.png" /home/pi/Abrir_solodstar.desktop
 sed -i "11c Name[es_ES]=Abrir solo DSTAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=OFF" /home/pi/status.ini
