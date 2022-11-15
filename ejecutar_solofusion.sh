@@ -1,5 +1,7 @@
 #!/bin/bash
-
+sudo killall ircddbgatewayd
+sudo killall ircddbgateway
+sleep 2
 mode=`grep -n -m 1 "^UARTPort=" /home/pi/MMDVMHost/MMDVMFUSION.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
