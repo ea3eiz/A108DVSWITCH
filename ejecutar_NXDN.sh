@@ -37,11 +37,11 @@ sudo rm /home/pi/Abrir_NXDN.desktop
 
 cd /home/pi/MMDVMHost
 #/home/pi/A108/./qt_info_nxdn & sudo lxterminal --geometry=80x12 -e ./MMDVMNXDN MMDVMNXDN.ini &
-xterm -geometry 88x9+1274+787 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_MMDVMNXDN -e ./MMDVMNXDN MMDVMNXDN.ini &
+xterm -geometry 88x9+1274+787 -bg blue -fg white -fa ‘verdana’ -fs 9x -T CONSOLA_MMDVMNXDN -e ./MMDVMNXDN MMDVMNXDN.ini &
 
 
 cd /home/pi/NXDNClients/NXDNGateway
-xterm -geometry 88x6+1274+665 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_NXDNGateway -e sudo ./NXDNGateway NXDNGateway.ini
+xterm -geometry 88x6+1274+665 -bg blue -fg white -fa ‘verdana’ -fs 9x -T CONSOLA_NXDNGateway -e sudo ./NXDNGateway NXDNGateway.ini
 
 
 cd /home/pi/Desktop
