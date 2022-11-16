@@ -11,21 +11,21 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
-marca_dvswitch=$(awk "NR==20" /home/pi/status.ini)
-if [ "$marca_dvswitch" = 'MARCA_DVSWITCH=ON' ];then
-
-echo "${BLANCO}"
-echo "                  ******************************************"
-echo "                  *           Al cerrar DMR2NXDN           *"
-echo "                  *          ${VERDE}se Activa DVSWITCH ${BLANCO}           *"
-echo "                  ******************************************"
-sleep 3
-
-# Activa DVSWITCH
-cd /home/pi/A108
-sh ejecutar_dvswitch.sh
-
-else
+#marca_dvswitch=$(awk "NR==20" /home/pi/status.ini)
+#if [ "$marca_dvswitch" = 'MARCA_DVSWITCH=ON' ];then
+#
+#echo "${BLANCO}"
+#echo "                  ******************************************"
+#echo "                  *           Al cerrar DMR2NXDN           *"
+#echo "                  *          ${VERDE}se Activa DVSWITCH ${BLANCO}           *"
+#echo "                  ******************************************"
+#sleep 3
+#
+## Activa DVSWITCH
+#cd /home/pi/A108
+#sh ejecutar_dvswitch.sh
+#
+#else
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
@@ -40,4 +40,4 @@ cd /home/pi
 sudo cp Abrir_DMR2NXDN.desktop /home/pi/Desktop
 
 sudo rm /home/pi/Abrir_DMR2NXDN.desktop
-fi
+#fi
