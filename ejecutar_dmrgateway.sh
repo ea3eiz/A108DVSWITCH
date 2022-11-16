@@ -57,7 +57,8 @@ sleep 2
 echo "${GRIS}"
 
 cd /home/pi/DMRGateway
-sudo ./DMRGateway DMRGateway.ini &
+
+xterm -geometry 88x7+648+0 -bg white -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_MMDVMDMRGATEWAY -e sudo ./DMRGateway DMRGateway.ini &
 
 sleep 2
 
