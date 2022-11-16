@@ -64,12 +64,12 @@ sudo cp Abrir_DMR2NXDN.desktop /home/pi/Desktop
 sudo rm /home/pi/Abrir_DMR2NXDN.desktop
 
 cd /home/pi/DMR2NXDN
-xterm -geometry 88x6+1274+665 -bg black -fg yellow -fa ‘verdana’ -fs 9x -T CONSOLA_DMR2NXDN -e ./DMR2NXDN DMR2NXDN.ini & 
+xterm -geometry 88x6+1274+665 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_DMR2NXDN -e ./DMR2NXDN DMR2NXDN.ini & 
 cd /home/pi/MMDVMHost
 #/home/pi/A108/./qt_info_dmr2nxdn & sudo lxterminal --geometry=75x12 -e ./DMR2NXDN MMDVMDMR2NXDN.ini &
-xterm -geometry 88x6+1274+665 -bg black -fg yellow -fa ‘verdana’ -fs 9x -T CONSOLA_MMDVMDMR2NXDN -e ./DMR2NXDN MMDVMDMR2NXDN.ini & 
+xterm -geometry 88x9+1274+787 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_MMDVMDMR2NXDN -e ./DMR2NXDN MMDVMDMR2NXDN.ini & 
 cd /home/pi/NXDNClients/NXDNGateway
-xterm -geometry 88x6+1274+665 -bg black -fg yellow -fa ‘verdana’ -fs 9x -T CONSOLA_NXDNGateway -e ./NXDNGateway NXDNGateway.ini
+xterm -geometry 88x6+1274+0 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_NXDNGateway -e ./NXDNGateway NXDNGateway.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_DMR2NXDN.desktop /home/pi
@@ -119,12 +119,12 @@ sudo cp Abrir_DMR2NXDN.desktop /home/pi/Desktop
 sudo rm /home/pi/Abrir_DMR2NXDN.desktop
 
 cd /home/pi/DMR2NXDN
-xterm -geometry 88x6+1274+665 -bg black -fg yellow -fa ‘verdana’ -fs 9x -T CONSOLA_DMR2NXDN -e ./DMR2NXDN DMR2NXDN.ini & 
+xterm -geometry 88x6+1274+665 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_DMR2NXDN -e ./DMR2NXDN DMR2NXDN.ini & 
 cd /home/pi/MMDVMHost
 #/home/pi/A108/./qt_info_dmr2nxdn & sudo lxterminal --geometry=75x12 -e ./DMR2NXDN MMDVMDMR2NXDN.ini &
-xterm -geometry 88x6+1274+665 -bg black -fg yellow -fa ‘verdana’ -fs 9x -T CONSOLA_MMDVMDMR2NXDN -e ./DMR2NXDN MMDVMDMR2NXDN.ini & 
+xterm -geometry 88x9+1274+787 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_MMDVMDMR2NXDN -e ./DMR2NXDN MMDVMDMR2NXDN.ini & 
 cd /home/pi/NXDNClients/NXDNGateway
-xterm -geometry 88x6+1274+665 -bg black -fg yellow -fa ‘verdana’ -fs 9x -T CONSOLA_NXDNGateway -e ./NXDNGateway NXDNGateway.ini
+xterm -geometry 88x6+1274+0 -bg black -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_NXDNGateway -e ./NXDNGateway NXDNGateway.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_DMR2NXDN.desktop /home/pi
