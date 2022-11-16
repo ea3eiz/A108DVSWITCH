@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo systemctl stop mmdvm_bridge.service #esto se hace para que funcione el DMRGateway
+sudo systemctl stop mmdvm_bridge.service #esto se hace para que funcione el DMRGateway 
 
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 buscar=":"
@@ -63,12 +63,14 @@ sleep 2
 
 cd /home/pi/MMDVMHost
 sudo ./MMDVMDMRGATEWAY MMDVMDMRGateway.ini 
+xterm -geometry 88x17+648+665 -bg white -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_MMDVMDMRGATEWAY -e sudo ./MMDVMDMRGATEWAY MMDVMDMRGateway.ini 
+
 
 # Cierra el icono ejecutar_dmrgateway si no hay conexión
 cd /home/pi/Desktop
 sudo cp Abrir_dmrgateway.desktop /home/pi/
 sleep 1
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=80x12 -e sudo sh ejecutar_dmrgateway.sh'" /home/pi/Abrir_dmrgateway.desktop
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh ejecutar_dmrgateway.sh'" /home/pi/Abrir_dmrgateway.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMRGATEWAY_OFF.png" /home/pi/Abrir_dmrgateway.desktop
 sed -i "10c Name[es_ES]=Abrir DMRGateway" /home/pi/Abrir_dmrgateway.desktop
 sed -i "19c DMRGateway=OFF" /home/pi/status.ini
