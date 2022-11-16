@@ -27,7 +27,8 @@ echo " *************************************************************************
 echo "                               ABRIENDO YSF   "
 echo " **************************************************************************"
 sleep 2
-sudo ./YSFGateway YSFGateway.ini
+
+xterm -geometry 88x6+648+665 -bg black -fg orange -fa ‘verdana’ -fs 9x -T CONSOLA_YSF -e sudo ./YSFGateway YSFGateway.ini
 
 
 
