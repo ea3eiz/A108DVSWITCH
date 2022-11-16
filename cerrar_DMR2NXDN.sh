@@ -2,14 +2,14 @@
 sudo killall DMR2NXDN
 sudo killall NXDNGateway
 
-#Colores
-ROJO="\033[1;31m"
-VERDE="\033[1;32m"
-BLANCO="\033[1;37m"
-AMARILLO="\033[1;33m"
-CIAN="\033[1;36m"
-GRIS="\033[0m"
-MARRON="\33[38;5;138m"
+##Colores
+#ROJO="\033[1;31m"
+#VERDE="\033[1;32m"
+#BLANCO="\033[1;37m"
+#AMARILLO="\033[1;33m"
+#CIAN="\033[1;36m"
+#GRIS="\033[0m"
+#MARRON="\33[38;5;138m"
 
 #marca_dvswitch=$(awk "NR==20" /home/pi/status.ini)
 #if [ "$marca_dvswitch" = 'MARCA_DVSWITCH=ON' ];then
