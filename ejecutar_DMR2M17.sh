@@ -11,14 +11,12 @@ cp ABRIR_DMR2M17.desktop /home/pi/Desktop
 
 sudo rm /home/pi/ABRIR_DMR2M17.desktop
 
-
-
-
-
 cd /home/pi/DMR2M17
-sudo lxterminal --geometry=75x12 -e ./DMR2M17 DMR2M17.ini & 
+xterm -geometry 88x4+648+0 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_DMR2M17 -e ./DMR2M17 DMR2M17.ini &
+
 
 cd /home/pi/MMDVMHost
-sudo lxterminal --geometry=80x12 -e ./MMDVMDMR2M17 MMDVMDMR2M17.ini
+xterm -geometry 88x17+648+665 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_MMDVMDMR2M17 -e ./MMDVMDMR2M17 MMDVMDMR2M17.ini 
+
 
   
