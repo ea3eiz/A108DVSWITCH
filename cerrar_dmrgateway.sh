@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo killall MMDVMDMRGATEWAY
+sudo killall -9 MMDVMDMRGATEWAY
 sudo killall DMRGateway
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
