@@ -19,7 +19,7 @@ sudo cp /home/pi/RXF_NXDN.desktop /home/pi/Desktop
 
 sudo rm /home/pi/RXF_NXDN.desktop
 
-#Escribe en el fichero INFO_NXDN para poner los datos en los iconos INFO TXF 
+#Escribe en el fichero INFO_NXDN para poner los datos en los iconos INFO TXF  
 sed -i "17c $frecuencia" /home/pi/INFO_RXF
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
@@ -37,13 +37,16 @@ sudo rm /home/pi/Abrir_NXDN.desktop
 
 cd /home/pi/MMDVMHost
 #/home/pi/A108/./qt_info_nxdn & sudo lxterminal --geometry=80x12 -e ./MMDVMNXDN MMDVMNXDN.ini &
-sudo lxterminal --geometry=80x12 -e ./MMDVMNXDN MMDVMNXDN.ini &
+xterm -geometry 88x9+1274+787 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_MMDVMNXDN -e ./MMDVMNXDN MMDVMNXDN.ini &
+
+
 cd /home/pi/NXDNClients/NXDNGateway
-sudo ./NXDNGateway NXDNGateway.ini
+xterm -geometry 88x6+1274+665 -bg violet -fg black -fa ‘verdana’ -fs 9x -T CONSOLA_NXDNGateway -e sudo ./NXDNGateway NXDNGateway.ini
+
 
 cd /home/pi/Desktop
 sudo cp Abrir_NXDN.desktop /home/pi
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=75x15 -e sudo sh ejecutar_NXDN.sh'" /home/pi/Abrir_NXDN.desktop
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;sudo sh ejecutar_NXDN.sh'" /home/pi/Abrir_NXDN.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_NXDN_OFF.png" /home/pi/Abrir_NXDN.desktop
 sed -i "10c Name[es_ES]=Abrir NXDN" /home/pi/Abrir_NXDN.desktop
 sed -i "17c NXDN=OFF" /home/pi/status.ini
