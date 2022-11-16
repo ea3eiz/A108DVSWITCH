@@ -13,6 +13,7 @@ clear
 sudo rm /home/pi/NXDNClients/NXDNGateway/*.log
 
 sudo rm /var/log/*.log
+sudo rm /var/log/opendv/*.log
 sudo rm /var/log/dvswitch/Analog*
 
 sudo rm /var/log/mmdvm/MMDVM*
