@@ -1,13 +1,13 @@
 #!/bin/bash
 
-SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-#Colores
-ROJO="\033[1;31m"
-VERDE="\033[1;32m"
-BLANCO="\033[1;37m"
-AMARILLO="\033[1;33m"
-CIAN="\033[1;36m"
-GRIS="\033[0m"
+#SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+##Colores
+#ROJO="\033[1;31m"
+#VERDE="\033[1;32m"
+#BLANCO="\033[1;37m"
+#AMARILLO="\033[1;33m"
+#CIAN="\033[1;36m"
+#GRIS="\033[0m"
 
 #estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 #if [ "$estado_dvswitch" = 'DVSWITCH=ON' ];then
@@ -174,7 +174,7 @@ sudo rm /home/pi/Abrir_ircDDB.desktop
 #sed -i "62c Enable=0" /opt/MMDVM_Bridge/dmrplus.ini
 #sed -i "62c Enable=0" /opt/MMDVM_Bridge/especial.ini
 #
-#sudo systemctl stop ircddbgateway.service
+sudo systemctl stop ircddbgateway.service
 
 # Ejecuta Solo D-STAR
 cd /home/pi/MMDVMHost
