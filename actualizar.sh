@@ -21,7 +21,7 @@ usuario="$usuario"
 SCRIPTS_version="A108"
 actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 
-version="A108DVSWITCH-"
+version="A108NEW-"
 version=$version$actualizacion
 
 #pone todos los status de inicio en OFF
@@ -91,14 +91,6 @@ sed -i "4c $masterbm" $usuario/info_panel_control.ini
 indi=$(awk "NR==2" $usuario/MMDVMHost/MMDVMPLUS.ini)
 ide=$(awk "NR==3" $usuario/MMDVMHost/MMDVMPLUS.ini)
 frec=$(awk "NR==13" $usuario/MMDVMHost/MMDVMPLUS.ini)
-#master=`grep -n -m 1 "^RemoteAddress=" $usuario/MMDVMHost/MMDVMPLUS.ini`
-#buscar=":"
-#largo=`expr index $master $buscar`
-#largo=`expr $largo + 1`
-#largo1=`expr $largo - 2`
-#largo=`expr substr $master 1 $largo1`
-#letra=c            
-#linea_master=$largo$letra
 masterplus=$(awk "NR==232" $usuario/MMDVMHost/MMDVMPLUS.ini)
 masterplus=`expr substr $masterplus 15 30`
 sed -i "11c $indi" $usuario/info_panel_control.ini
@@ -109,14 +101,6 @@ sed -i "14c $masterplus" $usuario/info_panel_control.ini
 indi=$(awk "NR==2" $usuario/MMDVMHost/MMDVM.ini)
 ide=$(awk "NR==3" $usuario/MMDVMHost/MMDVM.ini)
 frec=$(awk "NR==13" $usuario/MMDVMHost/MMDVM.ini)
-#master=`grep -n -m 1 "^RemoteAddress=" $usuario/MMDVMHost/MMDVM.ini`
-#buscar=":"
-#largo=`expr index $master $buscar`
-#largo=`expr $largo + 1`
-#largo1=`expr $largo - 2`
-#largo=`expr substr $master 1 $largo1`
-#letra=c            
-#linea_master=$largo$letra
 masterradio=$(awk "NR==232" $usuario/MMDVMHost/MMDVM.ini)
 masterradio=`expr substr $masterradio 15 30`
 sed -i "6c $indi" $usuario/info_panel_control.ini
@@ -136,13 +120,7 @@ tg=$(awk "NR==43" $usuario/YSF2DMR/YSF2DMR.ini)
 sed -i "24c $frec" $usuario/info_panel_control.ini
 sed -i "25c $master" $usuario/info_panel_control.ini
 sed -i "26c $tg" $usuario/info_panel_control.ini
-#DMR2YSF busca el Address DMR2YSF
-#master=`grep -n -m 1 "^Address=" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
-#buscar=":"
-#largo=`expr index $master $buscar`
-#largo=`expr $largo + 1`
-#largo1=`expr $largo - 2`
-#largo=`expr substr $master 1 $largo1`
+#MMDVMESPECIAL
 masterespecial=$(awk "NR==232" $usuario/MMDVMHost/MMDVMESPECIAL.ini)
 masterespecial=`expr substr $masterespecial 15 30`
 #YSFGateway.ini
