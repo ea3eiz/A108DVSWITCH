@@ -154,7 +154,7 @@ sala_fcs=`expr substr $sala_fcs 6 20`
 
 sala_nxdn=$(awk "NR==10" /opt/NXDNClients/NXDNGateway/private/NXDNHosts.txt)
 
-selfcare=$(awk "NR==74" /opt/MMDVM_Bridge/brandmeister_esp.ini)
+selfcare=$(awk "NR==74" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 
 reflector_dstar=$(awk "NR==18" /etc/ircddbgateway)
 

@@ -377,7 +377,7 @@ sala_nxdn=$(awk "NR==13" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitc
 sudo sed -i "10c $sala_nxdn" /opt/NXDNClients/NXDNGateway/private/NXDNHosts.txt
 
 selfcare=$(awk "NR==14" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
-sudo sed -i "74c $selfcare" /opt/MMDVM_Bridge/MMDVM_Bridge_BM.ini
+sudo sed -i "74c $selfcare" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 
 reflector_dstar=$(awk "NR==15" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "18c $reflector_dstar" /etc/ircddbgateway
