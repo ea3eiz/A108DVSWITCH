@@ -269,9 +269,9 @@ cp -f reglaxlx /home/pi/.local/
 # Restaura todos los datos de Dvswitch
 indicativo=$(awk "NR==1" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)          
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
-sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/brandmeister_esp.ini
-sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/dmrplus.ini
-sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge_BM.ini
+sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge_PLUS.ini
+sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini
 sudo sed -i "2c Callsign=$indicativo" /opt/NXDNGateway.ini
 sudo sed -i "2c gatewayCallsign=$indicativo" /etc/ircddbgateway
 sudo sed -i "95c ircddbUsername=$indicativo" /etc/ircddbgateway
@@ -295,9 +295,9 @@ sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/FCS.ini
 
 id2=$(awk "NR==4" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
-sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/brandmeister_esp.ini
-sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/dmrplus.ini
-sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/MMDVM_Bridge_BM.ini
+sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/MMDVM_Bridge_PLUS.ini
+sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini
 sudo sed -i "39c repeaterID = $id2" /opt/Analog_Bridge/Analog_Bridge.ini
 sudo sed -i "39c repeaterID = $id2" /opt/Analog_Bridge/dmr.ini
 sudo sed -i "39c repeaterID = $id2" /opt/Analog_Bridge/dstar.ini
@@ -309,16 +309,16 @@ sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
 Latitude=$(awk "NR==5" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
-sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/brandmeister_esp.ini
-sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/dmrplus.ini
-sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge_BM.ini
+sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge_PLUS.ini
+sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
 Longitude=$(awk "NR==6" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
-sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/brandmeister_esp.ini
-sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/dmrplus.ini
-sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge_BM.ini
+sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge_PLUS.ini
+sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
 port=$(awk "NR==7" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
@@ -338,27 +338,34 @@ sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/ysf.ini
 
 location=$(awk "NR==8" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
-sudo sed -i "14c $location" /opt/MMDVM_Bridge/brandmeister_esp.ini
-sudo sed -i "14c $location" /opt/MMDVM_Bridge/dmrplus.ini
-sudo sed -i "14c $location" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge_BM.ini
+sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge_PLUS.ini
+sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini
 #sudo sed -i "17c $location" /opt/NXDNGateway.ini
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
 url=$(awk "NR==9" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
-sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/brandmeister_esp.ini
-sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/dmrplus.ini
-sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge_BM.ini
+sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge_PLUS.ini
+sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
+frecuencia=$(awk "NR==2" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
+sudo sed -i "8c RXFrequency=$frecuencia" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
+sudo sed -i "8c RXFrequency=$frecuencia" /opt/MMDVM_Bridge/MMDVM_Bridge_BM.ini
+sudo sed -i "8c RXFrequency=$frecuencia" /opt/MMDVM_Bridge/MMDVM_Bridge_PLUS.ini
+sudo sed -i "8c RXFrequency=$frecuencia" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini
+sudo sed -i "8c RXFrequency=$frecuencia" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
+
 address_especial=$(awk "NR==2" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
-sudo sed -i "70c $address_especial" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "70c $address_especial" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini
 
 password_especial=$(awk "NR==10" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
-sudo sed -i "74c $password_especial" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "74c $password_especial" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini
 
 port_especial=$(awk "NR==11" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
-sudo sed -i "71c $port_especial" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "71c $port_especial" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini
 
 sala_fcs=$(awk "NR==12" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "40c txTg = $sala_fcs" /opt/Analog_Bridge/FCS.ini
@@ -370,7 +377,7 @@ sala_nxdn=$(awk "NR==13" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitc
 sudo sed -i "10c $sala_nxdn" /opt/NXDNClients/NXDNGateway/private/NXDNHosts.txt
 
 selfcare=$(awk "NR==14" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
-sudo sed -i "74c $selfcare" /opt/MMDVM_Bridge/brandmeister_esp.ini
+sudo sed -i "74c $selfcare" /opt/MMDVM_Bridge/MMDVM_Bridge_BM.ini
 
 reflector_dstar=$(awk "NR==15" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "18c $reflector_dstar" /etc/ircddbgateway

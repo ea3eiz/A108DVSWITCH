@@ -110,7 +110,7 @@ cp -f /home/pi/.local/reglaxlx /home/pi/.local/COPIA_SEGURIDAD/Downloads
 indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 10 6`
 
-address_especial=$(awk "NR==70" /opt/MMDVM_Bridge/especial.ini)
+address_especial=$(awk "NR==70" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini)
 
 id=$(awk "NR==38" /opt/Analog_Bridge/Analog_Bridge.ini)
 id=`echo "$id" | tr -d '[[:space:]]'`
@@ -134,9 +134,12 @@ location=$(awk "NR==14" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 url=$(awk "NR==16" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 url=`expr substr $url 5 30`
 
-password_especial=$(awk "NR==74" /opt/MMDVM_Bridge/especial.ini)
+frecuencia=$(awk "NR==8" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
+frecuencia=`expr substr $frecuencia 13 9`
 
-port_especial=$(awk "NR==71" /opt/MMDVM_Bridge/especial.ini)
+password_especial=$(awk "NR==74" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini)
+
+port_especial=$(awk "NR==71" /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini)
 
 sala_fcs=$(awk "NR==40" /opt/Analog_Bridge/FCS.ini)
 sala_fcs=`echo "$sala_fcs" | tr -d '[[:space:]]'`
@@ -150,7 +153,7 @@ reflector_dstar=$(awk "NR==18" /etc/ircddbgateway)
 
 # Copia todos los datos de Dvswitch /home/pi/.local/COPIA_SEGURIDAD/Downloads
 sed -i "1c $indicativo" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "2c $address_especial" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "2c $frecuencia" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 sed -i "3c $id" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 sed -i "4c $id2" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 sed -i "5c $Latitude" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
@@ -175,4 +178,3 @@ sudo cp -f /opt/HBmonitor/index_template.html /home/pi/.local/COPIA_SEGURIDAD/Do
 sudo cp -f /home/pi/info.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
 sudo chmod 777 -R /home/pi/.local/COPIA_SEGURIDAD
-
