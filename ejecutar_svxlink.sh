@@ -28,7 +28,7 @@ echo " ************************************************"
 sleep 2
 
 
-xterm -geometry 88x17+1274+665 -bg brown -fg white -fa ‘verdana’ -fs 9x -T CONSOLA_BRANDMEISTER -e sudo svxlink
+xterm -geometry 88x17+1274+665 -bg black -fg white -fa ‘verdana’ -fs 9x -T CONSOLA_SVXLINK -e sudo svxlink
 
 
 
