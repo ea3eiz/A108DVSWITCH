@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /home/pi/MMDVMHost
-tail -1 MMDVM-2022-11-21.log > /home/pi/MMDVMHost/INDICATIVO.txt
+tail -1 MMDVM-2022-11-21.log sinespacios=$(echo "$var" | tr -d '[[:space:]]') > /home/pi/MMDVMHost/INDICATIVO.txt
 
 
 #variable="Esto es una cadena de texto con espacios en blanco"
