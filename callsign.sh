@@ -5,7 +5,7 @@ var=$(tail -1 MMDVM-2022-11-21.log)
 
 var=$(echo "$var" | tr -d '[[:space:]]')
 
-var=`expr substr $var 5 6`
+var=`expr substr $var 75 6`
 
 sudo sed -i "1c $var" /home/pi/MMDVMHost/HOLA.txt
 
