@@ -8,7 +8,7 @@ var=`expr substr $var 65 6`
 echo "variable var $var"
 
 read a
-sudo sed -i "1c $var" /home/pi/MMDVMHost/HOLA.txt
+#sudo sed -i "1c $var" /home/pi/MMDVMHost/HOLA.txt
 
-xterm -geometry 76x11+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -f INDICATIVO.txt
+#xterm -geometry 76x11+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -f INDICATIVO.txt
 
