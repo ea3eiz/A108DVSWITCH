@@ -1,9 +1,9 @@
 #!/bin/bash
-cd /home/pi/MMDVMHost
-tail -1 MMDVM-2022-11-21.log > /home/pi/MMDVMHost/INDICATIVO.txt
+#cd /home/pi/MMDVMHost
+#tail -1 MMDVM-2022-11-21.log > /home/pi/MMDVMHost/INDICATIVO.txt
 
 var=$(awk "NR==1" /home/pi/MMDVMHost/INDICATIVO.txt)
-var=`expr substr $var 65 6`
+var=`expr substr $var 3 6`
 
 echo "variable var $var"
 
