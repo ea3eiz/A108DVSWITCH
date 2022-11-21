@@ -4,7 +4,7 @@ tail -1 MMDVM-2022-11-21.log > /home/pi/MMDVMHost/INDICATIVO.txt
 
 var=$(awk "NR==1" /home/pi/MMDVMHost/INDICATIVO.txt)
 
-puerto=`expr substr $var 5 3`
+puerto=`expr substr $var 65 6`
 sed -i "1c $puerto" /home/pi/MMDVMHost/HOLA.txt
 
 
