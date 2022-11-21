@@ -6,11 +6,11 @@ var=$(tail -1 MMDVM-2022-11-21.log)
 #variable="Esto es una cadena de texto con espacios en blanco"
 #sinespacios=$(echo "$variable" | tr -d '[[:space:]]')
 #echo $sinespacios
-
-
-
-#var=$(awk "NR==1" /home/pi/MMDVMHost/INDICATIVO.txt)
 var=$(echo "$var" | tr -d '[[:space:]]')
+echo "variable var = $var"
+read a
+#var=$(awk "NR==1" /home/pi/MMDVMHost/INDICATIVO.txt)
+
 
 
 var=`expr substr $var 75 6`
