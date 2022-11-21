@@ -5,9 +5,23 @@ var=$(tail -1 MMDVM-2022-11-21.log)
 
 var=$(echo "$var" | tr -d '[[:space:]]')
 
-var=`expr substr $var 70 6`
+var2=`expr substr $var 70 6`
+var1=`expr substr $var 66 4`
 
-sudo sed -i "1c $var" /home/pi/MMDVMHost/HOLA.txt
 
-xterm -geometry 7x1+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -f /home/pi/MMDVMHost/HOLA.txt
 
+
+#echo "var1 = $var1"
+#echo "var2 = $var2"
+
+
+
+if [ "$var1" = "from" ];then
+
+sudo sed -i "1c $var2" /home/pi/MMDVMHost/HOLA.txt
+#xterm -geometry 7x2+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -f /home/pi/MMDVMHost/HOLA.txt
+else
+sudo sed -i "1c NOCALL" /home/pi/MMDVMHost/HOLA.txt
+#xterm -geometry 7x2+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -f /home/pi/MMDVMHost/HOLA.txt
+
+fi
