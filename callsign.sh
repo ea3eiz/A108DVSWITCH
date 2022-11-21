@@ -1,8 +1,18 @@
 #!/bin/bash
-#cd /home/pi/MMDVMHost
-#tail -1 MMDVM-2022-11-21.log > /home/pi/MMDVMHost/INDICATIVO.txt
+cd /home/pi/MMDVMHost
+tail -1 MMDVM-2022-11-21.log > /home/pi/MMDVMHost/INDICATIVO.txt
+
+
+#variable="Esto es una cadena de texto con espacios en blanco"
+#sinespacios=$(echo "$variable" | tr -d '[[:space:]]')
+#echo $sinespacios
+
+
 
 var=$(awk "NR==1" /home/pi/MMDVMHost/INDICATIVO.txt)
+var=$(echo "$var" | tr -d '[[:space:]]')
+
+
 var=`expr substr $var 75 6`
 
 
