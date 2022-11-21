@@ -13,10 +13,10 @@ read a
 
 
 
-var=`expr substr $var 75 6`
+var=`expr substr $var 5 6`
 
 
 sudo sed -i "1c $var" /home/pi/MMDVMHost/HOLA.txt
 
-xterm -geometry 6x1+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -f /home/pi/MMDVMHost/HOLA.txt
+xterm -geometry 6x1+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -1 /home/pi/MMDVMHost/HOLA.txt
 
