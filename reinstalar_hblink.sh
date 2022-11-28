@@ -22,7 +22,7 @@ sudo rm -R /opt/HBmonitor
 
 
 echo "${MARRON}"
-sudo apt update
+sudo apt update -y
 sudo apt install python3-distutils
 
 cd /opt/
