@@ -1,8 +1,9 @@
 #!/bin/bash
 
+i=1000000000000
+until [ $i -lt 0 ]
+do
 
-  
-while true; do
 
 
 
@@ -10,7 +11,7 @@ while true; do
 
 
 sudo pkill -f qt_Callsign
-#sleep 2
+sleep 10
 cd /home/pi/MMDVMHost
 
 var=$(tail -1 MMDVM-2022-12-29.log)
@@ -40,5 +41,5 @@ sudo sed -i "1c $var2" /home/pi/MMDVMHost/HOLA.txt
 cd /home/pi/A108
 ./qt_Callsign
 
-    ((i++))
+    ((i--))
 done
