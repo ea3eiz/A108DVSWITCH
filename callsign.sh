@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /home/pi/MMDVMHost
 
-var=$(tail -1 MMDVM-2022-11-21.log)
+var=$(tail -1 MMDVM-2022-12-29.log)
 
 var=$(echo "$var" | tr -d '[[:space:]]')
 
