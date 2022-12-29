@@ -29,3 +29,8 @@ sudo sed -i "1c NOCALL" /home/pi/MMDVMHost/HOLA.txt
 fi
 cd /home/pi/A108
 ./qt_Callsign
+
+for (( ; ; ))
+do
+  sh callsign.sh
+done
