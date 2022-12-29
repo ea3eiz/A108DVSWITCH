@@ -10,7 +10,7 @@ while true; do
 
 
 sudo pkill -f qt_Callsign
-sleep 2
+#sleep 2
 cd /home/pi/MMDVMHost
 
 var=$(tail -1 MMDVM-2022-12-29.log)
