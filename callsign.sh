@@ -1,4 +1,15 @@
 #!/bin/bash
+
+i=0
+while [ $i -lt 100000 ]
+do
+  
+
+
+
+
+
+
 sudo pkill -f qt_Callsign
 sleep 2
 cd /home/pi/MMDVMHost
@@ -28,9 +39,7 @@ sudo sed -i "1c NOCALL" /home/pi/MMDVMHost/HOLA.txt
 
 fi
 cd /home/pi/A108
-./qt_Callsign &
-for (( ; ; ))
-do
-cd /home/pi/A108
-sh callsign.sh
+./qt_Callsign
+
+    ((i++))
 done
