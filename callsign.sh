@@ -1,9 +1,8 @@
 #!/bin/bash
 
-i=0
-while [ $i -lt 100000 ]
-do
+
   
+while true; do
 
 
 
@@ -29,15 +28,15 @@ var1=`expr substr $var 66 4`
 
 
 
-if [ "$var1" = "from" ];then
+#if [ "$var1" = "from" ];then
 
 sudo sed -i "1c $var2" /home/pi/MMDVMHost/HOLA.txt
 #xterm -geometry 7x2+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -f /home/pi/MMDVMHost/HOLA.txt
-else
-sudo sed -i "1c NOCALL" /home/pi/MMDVMHost/HOLA.txt
+#else
+#sudo sed -i "1c NOCALL" /home/pi/MMDVMHost/HOLA.txt
 #xterm -geometry 7x2+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -f /home/pi/MMDVMHost/HOLA.txt
 
-fi
+#fi
 cd /home/pi/A108
 ./qt_Callsign
 
