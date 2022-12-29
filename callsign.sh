@@ -32,5 +32,6 @@ cd /home/pi/A108
 
 for (( ; ; ))
 do
-  sh callsign.sh
+cd /home/pi/A108
+sh callsign.sh
 done
