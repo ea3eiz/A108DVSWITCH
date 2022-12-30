@@ -14,7 +14,7 @@ sudo pkill -f qt_Callsign
 sleep 10
 cd /home/pi/MMDVMHost
 
-var=$(tail -1 MMDVM-2022-12-29.log)
+var=$(tail -1 MMDVM-2022-12-30.log)
 
 var=$(echo "$var" | tr -d '[[:space:]]')
 
