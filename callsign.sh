@@ -5,7 +5,7 @@ cd /home/pi/MMDVMHost
 
 var=$(tail -2 MMDVM-2022-12-30.log)
 
-var=$(echo "$var" | tr -d '[[:space:]]')
+#var=$(echo "$var" | tr -d '[[:space:]]')
 
 var2=`expr substr $var 38 16`
 var1=`expr substr $var 1 1`
