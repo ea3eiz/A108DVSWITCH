@@ -1,15 +1,5 @@
 #!/bin/bash
 
-i=1000000000000
-until [ $i -lt 0 ]
-do
-
-
-
-
-
-
-
 sudo pkill -f qt_Callsign
 sleep 10
 cd /home/pi/MMDVMHost
@@ -24,22 +14,16 @@ var1=`expr substr $var 66 4`
 
 
 
-#echo "var1 = $var1"
-#echo "var2 = $var2"
-
-
-
-#if [ "$var1" = "from" ];then
+echo "var1 = $var1"
+echo "var2 = $var2"
+if [ "$var1" = "from" ];then
 
 sudo sed -i "1c $var2" /home/pi/MMDVMHost/HOLA.txt
 #xterm -geometry 7x2+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -f /home/pi/MMDVMHost/HOLA.txt
-#else
-#sudo sed -i "1c NOCALL" /home/pi/MMDVMHost/HOLA.txt
+else
+sudo sed -i "1c NOCALL" /home/pi/MMDVMHost/HOLA.txt
 #xterm -geometry 7x2+652+134 -bg black -fg white -fa ‘verdana’ -fs 19x -T ACTUALIZANDO_IMAGEN -e tail -f /home/pi/MMDVMHost/HOLA.txt
 
-#fi
+fi
 cd /home/pi/A108
 ./qt_Callsign
-
-    ((i--))
-done
