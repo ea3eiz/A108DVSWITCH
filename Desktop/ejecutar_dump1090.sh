@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo killall dump1090
 #mode=`grep -n -m 1 "^UARTPort=" /home/pi/MMDVMHost/MMDVMBM.ini`
 #buscar=":"
 #caracteres=`expr index $mode $buscar`
