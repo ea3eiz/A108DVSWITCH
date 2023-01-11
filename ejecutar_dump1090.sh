@@ -22,19 +22,18 @@
 ##Escribe en el fichero INFO_RXF para poner los datos en el icono INFO TXF 
 #sed -i "1c $frecuencia" /home/pi/INFO_RXF
 #
-#SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-#cd /home/pi/Desktop
-#sudo cp Abrir_MMDVMBM.desktop /home/pi
-#sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh cerrar_bm.sh'" /home/pi/Abrir_MMDVMBM.desktop
-#sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_BM_ON.png" /home/pi/Abrir_MMDVMBM.desktop
-#sed -i "10c Name[es_ES]=Cerrar BM" /home/pi/Abrir_MMDVMBM.desktop
+SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+cd /home/pi/Desktop
+sudo cp Abrir_BlueDV.desktop /home/pi
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh cerrar_dump1090.sh'" /home/pi/Abrir_BlueDV.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_AVION_ON.png" /home/pi/Abrir_BlueDV.desktop
+sed -i "10c Name[es_ES]=Cerrar Dump1090" /home/pi/Abrir_BlueDV.desktop
 #sed -i "7c MMDVMBM=ON" /home/pi/status.ini
-#cd /home/pi
-#sudo cp Abrir_MMDVMBM.desktop /home/pi/Desktop
+cd /home/pi
+sudo cp Abrir_BlueDV.desktop /home/pi/Desktop
 #
-#sudo rm /home/pi/Abrir_MMDVMBM.desktop
+sudo rm /home/pi/Abrir_BlueDV.desktop
 #
-#cd /home/pi/MMDVMHost
 
 cd /home/pi/dump1090
 xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --dev-sdrplay
@@ -46,13 +45,13 @@ xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1
 
 
 
-#cd /home/pi/Desktop
-#sudo cp Abrir_MMDVMBM.desktop /home/pi
-#sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sh ejecutar_bm.sh'" /home/pi/Abrir_MMDVMBM.desktop
-#sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_BM_OFF.png" /home/pi/Abrir_MMDVMBM.desktop
-#sed -i "10c Name[es_ES]=Abrir BM" /home/pi/Abrir_MMDVMBM.desktop
+cd /home/pi/Desktop
+sudo cp Abrir_BlueDV.desktop /home/pi
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sh ejecutar_dump1090.sh'" /home/pi/Abrir_BlueDV.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_AVION_OFF.png" /home/pi/Abrir_BlueDV.desktop
+sed -i "10c Name[es_ES]=Abrir Dump1090" /home/pi/Abrir_BlueDV.desktop
 #sed -i "7c MMDVMBM=OFF" /home/pi/status.ini
-#cd /home/pi
-#sudo cp Abrir_MMDVMBM.desktop /home/pi/Desktop
-#sleep 1
-#sudo rm /home/pi/Abrir_MMDVMBM.desktop
+cd /home/pi
+sudo cp Abrir_BlueDV.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/Abrir_BlueDV.desktop
