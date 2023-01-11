@@ -36,7 +36,7 @@
 #
 #cd /home/pi/MMDVMHost
 
-cd /home/pi/A108
+cd /home/pi/dump1090
 xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --dev-sdrplay
 
 
