@@ -36,7 +36,18 @@ sudo rm /home/pi/Abrir_BlueDV.desktop
 #
 
 cd /home/pi/dump1090
-xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --dev-sdrplay
+
+stick=$(awk "NR==24" /home/pi/status.ini)
+if [ "$stick" = 'RSP1' ];then
+xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --dev-sdrplay 
+else
+xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive 
+fi
+
+
+
+
+
 
 
 
