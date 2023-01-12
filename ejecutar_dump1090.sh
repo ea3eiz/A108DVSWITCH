@@ -15,11 +15,12 @@ cd /home/pi/dump1090
 stick=$(awk "NR==40" /home/pi/status.ini)
 puerto=$(awk "NR==42" /home/pi/status.ini)
 ppm=$(awk "NR==44" /home/pi/status.ini)
+http=$(awk "NR==46" /home/pi/status.ini)
 
 if [ "$stick" = 'RSP1' ];then
-xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --dev-sdrplay --net-ro-port $puerto --ppm $ppm 
+xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --dev-sdrplay --net-ro-port $puerto --ppm $ppm --net-http-port $http
 else
-xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --net-ro-port $puerto --ppm $ppm
+xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --net-ro-port $puerto --ppm $ppm --net-http-port $http
 fi
 
 
